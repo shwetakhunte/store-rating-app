@@ -20,7 +20,9 @@ A web application that allows users to submit ratings for registered stores.
 ### Backend Setup:
 ```sh
 cd backend
-npm install
+npm init -y
+nodemon
+cd frontend
 npm start
 
 
