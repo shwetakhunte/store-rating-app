@@ -22,3 +22,17 @@ A web application that allows users to submit ratings for registered stores.
 cd backend
 npm install
 npm start
+
+
+Admin Login:
+username: admin@gmail.com
+password: Gauri@2396#
+
+
+User login:
+username: demo@gmail.com
+password: Demo@2396#
+
+Store Admin Login:
+username: johndoe@example.com
+assword: Jhondeo@2396#
