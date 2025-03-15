@@ -6,7 +6,7 @@ const router = express.Router();
 require("dotenv").config();
 const { authenticateToken } = require("../middleware/authMiddleware"); // Ensure user is authenticated
 
-// 🛠 Register Route (With Store Owner Logic)
+// Register Route (With Store Owner Logic)
 router.post("/register", async (req, res) => {
     const { name, email, password, address, role } = req.body;
 
@@ -45,7 +45,7 @@ router.post("/register", async (req, res) => {
     });
 });
 
-// 🛠 Login Route (With Store Owner Handling)
+//Login Route (With Store Owner Handling)
 router.post("/login", (req, res) => {
     console.log("Login request received:", req.body);
 
@@ -87,7 +87,7 @@ router.post("/login", (req, res) => {
 router.post("/update-password", authenticateToken, async (req, res) => {
     try {
         const { password } = req.body;
-        const userId = req.user.id; // ✅ Extract from token instead of req.body
+        const userId = req.user.id; // 
 
         if (!userId) {
             return res.status(400).json({ error: "User ID not found in token." });
