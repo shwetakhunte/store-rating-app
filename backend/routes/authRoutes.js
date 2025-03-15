@@ -6,7 +6,7 @@ const router = express.Router();
 const dotenv = require("dotenv");
 dotenv.config();
 
-// 🛠 User Registration Route
+// User Registration Route
 router.post("/register", async (req, res) => {
     const { name, email, password, address, role } = req.body;
 
@@ -41,7 +41,7 @@ router.post("/register", async (req, res) => {
     });
 });
 
-// 🛠 User Login Route
+// User Login Route
 router.post("/login", (req, res) => {
     const { email, password } = req.body;
 
