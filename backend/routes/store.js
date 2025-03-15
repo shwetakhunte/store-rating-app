@@ -2,7 +2,7 @@ const express = require("express");
 const db = require("../config/db");
 const router = express.Router();
 
-// ✅ Fetch all stores
+//Fetch all stores
 router.get("/api/stores", (req, res) => {
     const query = `
     SELECT 
@@ -25,7 +25,7 @@ router.get("/api/stores", (req, res) => {
 
 
 
-// 🏪 Register a Store
+// Register a Store
 router.post("/register", (req, res) => {
     const { name, address, owner_id } = req.body;
 
