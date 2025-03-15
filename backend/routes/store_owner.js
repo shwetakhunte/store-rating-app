@@ -7,7 +7,7 @@ const { authenticateUser, authenticateStoreOwner } = require("../middleware/auth
 const router = express.Router();
 const SECRET_KEY = process.env.JWT_SECRET || "your_secret_key"; // Ensure it's set in your env file
 
-// ✅ Store Owner Login
+// Store Owner Login
 router.post("/login", (req, res) => {
     const { email, password } = req.body;
 
@@ -31,7 +31,7 @@ router.post("/login", (req, res) => {
     });
 });
 
-// ✅ Store Owner Update Password
+// Store Owner Update Password
 router.post("/api/store-owner/update-password", authenticateStoreOwner, async (req, res) => {
     try {
         const { currentPassword, newPassword } = req.body;
@@ -54,7 +54,7 @@ router.post("/api/store-owner/update-password", authenticateStoreOwner, async (r
     }
 });
 
-// ✅ View a list of users who submitted ratings for the store
+// View a list of users who submitted ratings for the store
 router.get("/api/store-owner/ratings", authenticateStoreOwner, async (req, res) => {
     try {
         const storeOwnerId = req.user.id;
