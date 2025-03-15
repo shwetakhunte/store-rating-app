@@ -30,8 +30,7 @@ app.use("/", storeRoutes);
 app.use("/", ratingRoutes);
 app.use("/", adminRoutes);
 //app.use("/", storeowner);
-app.use("/", storeOwnerRoutes); // ✅ Ensure store-owner routes are prefixed with /api
-
+app.use("/", storeOwnerRoutes); 
 
 // Default test route
 app.get("/", (req, res) => {
